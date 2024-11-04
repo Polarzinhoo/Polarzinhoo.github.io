@@ -1,0 +1,32 @@
+[
+    {
+        "pergunta": "(Enem 2022) Uma cozinheira produz docinhos especiais por encomenda. Usando uma receita-base de massa, ela prepara uma porção, com a qual produz 50 docinhos maciços de formato esférico, com 2 cm de diâmetro. Um cliente encomenda 150 desses docinhos, mas pede que cada um tenha formato esférico com 4 cm de diâmetro. A cozinheira pretende preparar o número exato de porções da receita-base de massa necessário para produzir os docinhos dessa encomenda.\nQuantas porções da receita-base de massa ela deve preparar para atender esse cliente?\na) 2\nb) 3\nc) 6\nd) 12\ne) 24",
+        "alternativas": ["a", "b", "c", "d", "e"],
+        "resposta": "d"
+    },
+    {
+        "pergunta": "(Enem 2022) Ao escutar à notícia de que um filme recém-lançado arrecadou, no primeiro mês de lançamento, R$ 1,35 bilhão em bilheteria, um estudante escreveu corretamente o número que representa essa quantia, com todos os seus algarismos.\nO número escrito pelo estudante foi\na) 135 000,00\nb) 1 350 000,00\nc) 13 500 000,00\nd) 135 000 000,00\ne) 1 350 000 000,00",
+        "alternativas": ["a", "b", "c", "d", "e"],
+        "resposta": "e"
+    },
+    {
+        "pergunta": "Qual é a soma de 9 + 3?",
+        "alternativas": ["10", "11", "12", "13"],
+        "resposta": "12"
+    },
+    {
+        "pergunta": "Qual é o resultado de 6 * 4?",
+        "alternativas": ["27", "18", "24", "30"],
+        "resposta": "24"
+    },
+    {
+        "pergunta": "Qual é o valor de 10 - 2?",
+        "alternativas": ["8", "9", "10", "7"],
+        "resposta": "8"
+    },
+    {
+        "pergunta": "Qual é a fração equivalente a 2/4?",
+        "alternativas": ["1/2", "3/6", "4/8", "5/10"],
+        "resposta": "1/2"
+    }
+]
