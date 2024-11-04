@@ -3,90 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabalho Matemática</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        input {
-            margin-top: 10px;
-            padding: 10px;
-            width: 100%;
-        }
-        button {
-            margin-top: 10px;
-            padding: 10px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Jogo Matemático</title>
 </head>
 <body>
     <div class="container">
-        <h1>Qual o resultado?</h1>
-        <div id="question"></div>
-        <input type="number" id="answer" placeholder="Insira a resposta">
-        <button id="submit">Enviar</button>
-        <div id="message"></div>
-        <button id="next" style="display:none;">Próxima pergunta</button>
+        <h1>Jogo Matemático</h1>
+        <div id="questao"></div>
+        <div id="alternativas"></div>
+        <button id="nextButton" style="display: none;">Próxima Questão</button>
+        <div id="resultado" style="display: none;"></div>
+        <div id="tempo">Tempo: 0s</div>
+        <div id="pontuacao">Pontuação: 0</div>
     </div>
-    <script>
-        const perguntas = [
-            { texto: "João tinha 100 maçãs e ganhou 250. Quantas maçãs ele tem agora?", resposta: 100 + 250 },
-            { texto: "Maria coletou 345 flores e depois 678 mais. Quantas flores ela tem?", resposta: 345 + 678 },
-            { texto: "Pedro tinha 1200 reais e ganhou 3000. Quanto ele tem agora?", resposta: 1200 + 3000 },
-            { texto: "Um comerciante vendeu 5000 produtos e depois 25000. Quantos produtos foram vendidos?", resposta: 5000 + 25000 },
-            { texto: "Lucas tinha 1000 balas e deu 250. Quantas balas ele ficou?", resposta: 1000 - 250 },
-            { texto: "Ana tinha 1500 reais e gastou 375. Quanto ela ainda tem?", resposta: 1500 - 375 },
-            { texto: "Um caixa eletrônico tinha 2000 reais e retirou 1500. Quanto sobrou?", resposta: 2000 - 1500 },
-            { texto: "Carlos tinha 5000 pontos e perdeu 1000. Quantos pontos ele tem agora?", resposta: 5000 - 1000 },
-            { texto: "Um carro percorreu 45 km em 1 hora e 22 km em outra. Quantos km ele percorreu no total?", resposta: 45 * 22 },
-            { texto: "Um produto custa 67 reais e foi comprado 15 vezes. Qual o custo total?", resposta: 67 * 15 },
-            { texto: "Um atleta correu 123 metros 456 vezes. Qual a distância total?", resposta: 123 * 456 },
-            { texto: "Uma equipe tem 89 jogadores, cada um tem 32 pontos. Qual o total de pontos?", resposta: 89 * 32 },
-            { texto: "Se um carro consome 144 litros para 12 km, quanto consome por km?", resposta: 144 / 12 },
-            { texto: "Uma pessoa comeu 81 fatias de pizza em 9 dias. Quantas fatias por dia?", resposta: 81 / 9 },
-            { texto: "Se uma caixa contém 256 chocolates e são divididos em 16 pessoas, quantos cada um recebe?", resposta: 256 / 16 },
-            { texto: "Um computador tinha 1024 GB e perdeu 32 GB. Quanto ainda tem?", resposta: 1024 / 32 }
-        ];
-
-        let currentQuestion;
-        let currentAnswer;
-
-        function newQuestion() {
-            const index = Math.floor(Math.random() * perguntas.length);
-            currentQuestion = perguntas[index].texto;
-            currentAnswer = perguntas[index].resposta;
-            document.getElementById('question').textContent = currentQuestion;
-            document.getElementById('answer').value = '';
-            document.getElementById('message').textContent = '';
-            document.getElementById('next').style.display = 'none';
-        }
-
-        document.getElementById('submit').addEventListener('click', () => {
-            const userAnswer = parseInt(document.getElementById('answer').value);
-            if (userAnswer === currentAnswer) {
-                document.getElementById('message').textContent = 'Resposta correta!';
-                document.getElementById('next').style.display = 'block';
-            } else {
-                document.getElementById('message').textContent = 'Resposta errada, tente novamente.';
-            }
-        });
-
-        document.getElementById('next').addEventListener('click', newQuestion);
-
-        newQuestion();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
